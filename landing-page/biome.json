@@ -2,13 +2,18 @@
   "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**", "!dist", "!.svelte-kit", "!node_modules"]
+    "includes": ["**", "!build", "!.svelte-kit", "!node_modules"]
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 80
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
   },
   "javascript": {
     "formatter": {
@@ -39,9 +44,6 @@
           "correctness": {
             "noUnusedVariables": "off",
             "noUnusedImports": "off"
-          },
-          "complexity": {
-            "noImportantStyles": "off"
           }
         }
       }
