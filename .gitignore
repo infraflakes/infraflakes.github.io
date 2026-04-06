@@ -1,0 +1,8 @@
+dist/
+
+# Frontend
+node_modules/
+package.json.md5
+# Flake
+
+.direnv/
