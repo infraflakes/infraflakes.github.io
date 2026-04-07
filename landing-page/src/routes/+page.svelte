@@ -1,28 +1,28 @@
 <script lang="ts">
 const projects = [
   {
-    name: 'CloudKernel',
-    desc: 'Resilient automation for decentralized networks.',
+    name: 'srwc',
+    desc: 'An infinite canvas Wayland compositor.',
     lang: 'Rust',
+    url: 'https://github.com/infraflakes/srwc',
+  },
+  {
+    name: 'Veda Anchor',
+    desc: 'WIP Windows app and web blocker in Go and C.',
+    lang: 'C, Go',
     url: '#',
   },
   {
-    name: 'NixAtlas',
-    desc: 'Autonomous deployment pipeline via consensus.',
-    lang: 'Nix',
-    url: '#',
+    name: 'srwm',
+    desc: 'An infinite canvas X11 window manager.',
+    lang: 'C, Rust',
+    url: 'https://github.com/infraflakes/srwm-x11',
   },
   {
-    name: 'Sentinel',
-    desc: 'Secure infrastructure layer for high-fidelity systems.',
+    name: 'blogserve',
+    desc: 'Blazing fast and simple markdown-based static blog engine.',
     lang: 'Go',
-    url: '#',
-  },
-  {
-    name: 'Reflate',
-    desc: 'High-performance infrastructure tooling.',
-    lang: 'C++',
-    url: '#',
+    url: 'https://github.com/infraflakes/blogserve',
   },
 ];
 
@@ -43,20 +43,20 @@ const links = [
     <h1 class="text-xl">infraflakes</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-muted leading-relaxed max-w-2xl">
       <p>
-        Developer focused on decentralized infrastructure, NixOS ecosystems, and high-performance automation. 
-        Building tools that prioritize resilience and simplicity over hype.
+        Self taught platform engineer. I enjoy building high-performance systems and tooling.
       </p>
-      <div class="text-[11px] space-y-1 font-mono uppercase tracking-tight tabular-nums">
-        <div class="flex justify-between border-b border-border pb-1"><span>Loc:</span> <span>AS-SOUTH-1</span></div>
-        <div class="flex justify-between border-b border-border pb-1"><span>Stack:</span> <span>Rust, Go, Nix</span></div>
-        <div class="flex justify-between border-b border-border pb-1"><span>Focus:</span> <span>Infrastructure</span></div>
+      <div class="text-[13px] space-y-2 font-mono uppercase tracking-tight tabular-nums border-l border-border pl-6">
+        <div class="flex justify-between border-b border-border/50 pb-1.5"><span class="text-muted">Status:</span> <span class="text-foreground">On Hiatus</span></div>
+        <div class="flex justify-between border-b border-border/50 pb-1.5"><span class="text-muted">Age:</span> <span class="text-foreground">18</span></div>
+        <div class="flex justify-between border-b border-border/50 pb-1.5"><span class="text-muted">Stack:</span> <span class="text-foreground">Rust, C, Go, Nix</span></div>
+        <div class="flex justify-between border-b border-border/50 pb-1.5"><span class="text-muted">Located:</span> <span class="text-foreground">Vietnam</span></div>
       </div>
     </div>
   </header>
 
   <!-- Projects Section -->
   <section id="projects" class="section-container space-y-6">
-    <h2 class="text-xs uppercase tracking-[0.2em] text-muted">Projects_List</h2>
+    <h2 class="text-xs uppercase tracking-[0.2em] text-muted">Projects</h2>
     <div class="border-t border-border">
       {#each projects as project}
         <a href={project.url} class="project-entry group">
@@ -72,34 +72,29 @@ const links = [
   <section id="contact" class="section-container grid grid-cols-1 md:grid-cols-2 gap-12">
     <div class="space-y-4">
       <h2 class="text-xs uppercase tracking-[0.2em] text-muted">Contact</h2>
-      <p class="text-muted">Available for infrastructure consulting and collaborative system design.</p>
-      <a href="mailto:contact@infraflakes.io" class="util-link text-foreground font-bold">contact@infraflakes.io</a>
+      <p class="text-muted">Available for discussions.</p>
+      <a href="mailto:infraflakes@proton.me" class="util-link text-foreground font-bold">infraflakes@proton.me</a>
     </div>
     
     <div class="space-y-4">
-      <h2 class="text-xs uppercase tracking-[0.2em] text-muted">Availability</h2>
+      <h2 class="text-xs uppercase text-[15px] tracking-[0.2em] text-muted">Availability</h2>
       <ul class="space-y-2 text-xs">
         <li class="flex items-center gap-2">
           <span class="w-1.5 h-1.5 bg-accent/40 rounded-full"></span>
-          <a href="https://github.com/infraflakes" class="util-link">GitHub_Source</a>
+          <a href="https://github.com/infraflakes" class="util-link">GitHub</a>
         </li>
         <li class="flex items-center gap-2">
           <span class="w-1.5 h-1.5 bg-border rounded-full"></span>
-          <a href="https://linkedin.com/in/infraflakes" class="util-link">LinkedIn_Identity</a>
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="w-1.5 h-1.5 bg-border rounded-full"></span>
-          <a href="https://twitter.com/infraflakes" class="util-link">Twitter_Feed</a>
+          <a href="https://x.com/infraflakes" class="util-link">X (formerly Twitter)</a>
         </li>
       </ul>
     </div>
   </section>
 
-  <footer class="pt-24 flex justify-between items-center text-[10px] text-muted tracking-widest uppercase">
+  <footer class="pt-24 flex justify-between items-center text-[12px] text-muted tracking-widest uppercase">
     <div>2026 @ infraflakes</div>
     <div class="flex gap-8">
-      <span>Status: Nominal</span>
-      <span>V4.1.0</span>
+      <span>V0.0.1</span>
     </div>
   </footer>
 </div>
