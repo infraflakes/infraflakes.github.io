@@ -10,7 +10,7 @@ const projects = [
     name: 'Veda Anchor',
     desc: 'WIP Windows app and web blocker in Go and C.',
     lang: 'C, Go',
-    url: '#',
+    url: 'https://github.com/VedaIO/veda-anchor',
   },
   {
     name: 'srwm',
