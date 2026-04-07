@@ -1,21 +1,33 @@
 <script lang="ts">
-import { onMount } from 'svelte';
-
 let { title = 'terminal', children } = $props();
 </script>
 
-<div class="tui-window flex flex-col h-full w-full overflow-hidden">
+<div class="tui-window flex flex-col h-full w-full">
   <div class="tui-header">
     <div class="flex items-center gap-2">
-      <span class="w-3 h-3 rounded-full bg-red-500/50 border border-red-500"></span>
-      <span class="w-3 h-3 rounded-full bg-yellow-500/50 border border-yellow-500"></span>
-      <span class="w-3 h-3 rounded-full bg-green-500/50 border border-green-500"></span>
-      <span class="ml-2 font-bold uppercase tracking-wider opacity-80">{title}</span>
+      <div class="flex gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-slate-700"></span>
+      </div>
+      <span class="ml-3 text-tui-dim uppercase tracking-[0.2em] text-[10px]">{title}</span>
     </div>
-    <div class="text-[10px] opacity-40">TTY1</div>
+    <div class="text-[10px] text-tui-dim font-mono">SSH v2.0</div>
   </div>
-  <div class="flex-grow p-4 overflow-auto bg-black/40 backdrop-blur-sm relative">
-    <div class="scanline pointer-events-none"></div>
+  <div class="flex-grow p-6 overflow-y-auto overflow-x-hidden bg-slate-900/30">
     {@render children()}
   </div>
 </div>
+
+<style>
+  div::-webkit-scrollbar {
+    width: 4px;
+  }
+  div::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  div::-webkit-scrollbar-thumb {
+    background: var(--color-tui-border);
+    border-radius: 10px;
+  }
+</style>
