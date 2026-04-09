@@ -24,6 +24,7 @@ jobs:
       - name: Build
         run: |
           nix develop --command bash -c "cd landing-page && bun install && bun run build"
+          echo "infraflakes.is-a.dev" > landing-page/build/CNAME
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
