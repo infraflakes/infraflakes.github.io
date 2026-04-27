@@ -1,0 +1,31 @@
+fn build_portfolio {
+  cd(`landing-page`);
+  exec(`nix develop -c bun install`);
+  exec(`nix develop -c bun run build`);
+}
+
+fn fmt_portfolio {
+  cd(`landing-page`);
+  exec(`nix develop -c biome format --write .`);
+  exec(`nix develop -c biome format .`);
+}
+
+fn lint_portfolio {
+  cd(`landing-page`);
+  exec(`nix develop -c biome lint --write .`);
+  exec(`nix develop -c biome lint .`);
+}
+
+seq build_portfolio {
+  build_portfolio(pr.portfolio);
+}
+
+seq check_portfolio {
+  fmt_portfolio(pr.portfolio);
+  lint_portfolio(pr.portfolio);
+}
+
+par all_portfolio {
+  seq.build_portfolio;
+  seq.check_portfolio;
+}
