@@ -1,16 +1,16 @@
 <script lang="ts">
 const projects = [
   {
+    name: 'kiru',
+    desc: 'A statically validated DSL and CLI for multiple git projects orchestration.',
+    lang: 'Rust',
+    url: 'https://github.com/infraflakes/kiru',
+  },
+  {
     name: 'srwc',
     desc: 'An infinite canvas Wayland compositor.',
     lang: 'Rust',
     url: 'https://github.com/infraflakes/srwc',
-  },
-  {
-    name: 'Veda Anchor',
-    desc: 'WIP Windows app and web blocker in Go and C.',
-    lang: 'C, Go',
-    url: 'https://github.com/VedaIO/veda-anchor',
   },
   {
     name: 'srwm',
