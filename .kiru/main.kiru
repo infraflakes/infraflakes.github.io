@@ -1,4 +1,3 @@
-pr portfolio {
   fn build {
     cd `landing-page`;
     exec `nix develop -c bun install`;
@@ -17,19 +16,11 @@ pr portfolio {
     exec `nix develop -c biome lint .`;
   }
 
-  seq build {
-    build;
+  run test {
+    fmt => lint => build;
   }
 
-  seq check {
+  run all {
     fmt;
-    lint;
+    fmt => lint => build;
   }
-
-  par all {
-    build;
-    fmt;
-    lint;
-    fmt;
-  }
-}
