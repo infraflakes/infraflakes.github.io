@@ -2,15 +2,9 @@
 const projects = [
   {
     name: 'kiru',
-    desc: 'A statically validated DSL and CLI for multiple git projects orchestration.',
+    desc: 'A statically typed, compiled programming language for task orchestration.',
     lang: 'Rust',
     url: 'https://github.com/infraflakes/kiru',
-  },
-  {
-    name: 'srwc',
-    desc: 'An infinite canvas Wayland compositor.',
-    lang: 'Rust',
-    url: 'https://github.com/infraflakes/srwc',
   },
   {
     name: 'srwm',
@@ -94,7 +88,7 @@ const links = [
   <footer class="pt-24 flex justify-between items-center text-[12px] text-muted tracking-widest uppercase">
     <div>2026 @ infraflakes</div>
     <div class="flex gap-8">
-      <span>V0.0.1</span>
+      <span>V0.0.2</span>
     </div>
   </footer>
 </div>

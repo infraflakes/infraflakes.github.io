@@ -1,23 +1,21 @@
-pr portfolio {
   fn build {
-    cd (landing-page);
+    cd(landing-page);
     $(nix develop -c bun install);
     $(nix develop -c bun run build);
   };
 
   fn fmt {
-    cd (landing-page);
+    cd(landing-page);
     $(nix develop -c biome format --write .);
     $(nix develop -c biome format .);
   };
 
   fn lint {
-    cd (landing-page);
+    cd(landing-page);
     $(nix develop -c biome lint --write .);
     $(nix develop -c biome lint .);
   };
-};
 
 run test_portfolio {
-  portfolio::fmt => portfolio::lint => portfolio::build;
+  portfolio::fmt() => portfolio::lint() => portfolio::build();
 };
