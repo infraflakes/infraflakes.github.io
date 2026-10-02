@@ -1,8 +1,8 @@
 <script lang="ts">
 const projects = [
   {
-    name: 'kiru',
-    desc: 'A statically typed, compiled programming language for task orchestration.',
+    name: 'Kiru',
+    desc: 'A statically typed, compiled programming language for process orchestration on Linux.',
     lang: 'Rust',
     url: 'https://github.com/infraflakes/kiru',
   },
